@@ -1,7 +1,7 @@
 export default function HomePage() {
     return (
         <>
-
+            <Home />
         </>
     )
 }
@@ -38,7 +38,7 @@ function Article() {
                 further explaining that during the Information Age, "credibility is the scarcest resource".
             </p>
             <p>Soft power <b>is not</b> propaganda or misunderstand information</p>
-            <fig></fig>
+            <img src="" alt="joseph nye"></img>
         </article>
     )
 }
@@ -48,20 +48,20 @@ function Section() {
         <section>
             <h2>Thailand Featured Soft Power</h2>
             <section>
-                <h4>Mango and Sticky Rice</h4>
-                <fig></fig>
+                <h4>Mango with Sticky Rice</h4>
+                <img src="src/assets/images/mango_with_sticky_rice.jpg" alt="" />
             </section>
             <section>
                 <h4>Y-Series</h4>
-                <fig></fig>
+                <img src="src/assets/images/y_series.jfif" alt="" />
             </section>
             <section>
                 <h4>T-POP</h4>
-                <fig></fig>
+                <img src="src/assets/images/t_pop.png" alt="" />
             </section>
             <section>
                 <h4>Thai Foods</h4>
-                <fig></fig>
+                <img src="src/assets/images/thai_food.avif" alt="" />
             </section>
         </section>
     )
