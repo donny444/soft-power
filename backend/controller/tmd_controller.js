@@ -7,13 +7,16 @@ async function Tmd(req, res) {
     const url = `https://data.tmd.go.th/nwpapi/v1/forecast/location/hourly/place?province=${province}&amphoe=${amphoe}&tambon=${tambon}`;
     const options = {
         headers: {
-            "authorization": process.env.TMD_TOKEN,
+            "authorization": `Bearer ${process.env.TMD_TOKEN}`,
             "accept": "application/json"
         }
     }
 
     try {
         const response = await fetch(url, options);
+        if(response.status === 401) {
+            return res.status(401).json({ error: "Unauthorized request"});
+        }
         const data = await response.json();
         return res.status(200).json(data);
     } catch(err) {

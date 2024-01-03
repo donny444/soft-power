@@ -37,8 +37,8 @@ function Article() {
                 Joseph Nye of Harvard University explained that with soft power, "the best propaganda is not propaganda", 
                 further explaining that during the Information Age, "credibility is the scarcest resource".
             </p>
-            <p>Soft power <b>is not</b> propaganda or misunderstand information</p>
-            <img src="" alt="joseph nye"></img>
+            <p>Soft power <b>is not</b> the same thing as cultural diplomacy.</p>
+            <img src="" alt="joseph_nye"></img>
         </article>
     )
 }
@@ -53,15 +53,15 @@ function Section() {
             </section>
             <section>
                 <h4>Y-Series</h4>
-                <img src="src/assets/images/y_series.jfif" alt="" />
+                <img src="src/assets/images/y_series.jpg" alt="" />
             </section>
             <section>
                 <h4>T-POP</h4>
-                <img src="src/assets/images/t_pop.png" alt="" />
+                <img src="src/assets/images/t_pop.jpg" alt="" />
             </section>
             <section>
                 <h4>Thai Foods</h4>
-                <img src="src/assets/images/thai_food.avif" alt="" />
+                <img src="src/assets/images/thai_food.jpg" alt="" />
             </section>
         </section>
     )
