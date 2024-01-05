@@ -25,11 +25,8 @@ const thingSchema = new Schema({
     },
     updatedAt: Date,
     comments: [{
-        user: {
-            type: SchemaTypes.ObjectId,
-            ref: "User"
-        },
-        detail: String
+        type: SchemaTypes.ObjectId,
+        ref: "Comment"
     }]
 });
 

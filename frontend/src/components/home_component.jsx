@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
     return (
         <>
@@ -21,8 +23,8 @@ function Main() {
         <main>
             <h1>Know Thai Soft Power</h1>
             <h3>Get to know what it actually is, and the real meaning of "Soft Power"</h3>
-            <button>Thai Food</button>
-            <button>Thai Weather</button>
+            <Link to="/things"><button>Thai Soft Power</button></Link>
+            <Link to="/tmd"><button>Thai Weather</button></Link>
         </main>
     )
 }
