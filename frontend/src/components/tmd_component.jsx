@@ -1,27 +1,35 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import NavBar from "./navbar_component";
 
-export default function ThingsPage() {
+export default function TmdPage() {
     return (
         <>
             <NavBar />
-            <Things />
+            <Tmd />
         </>
     )
 }
 
-function Things() {
+function Tmd() {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            const apiUrl = "http://localhost:5174/things";
+            const apiUrl = new URL("http://localhost:5174/tmd");
+            const queries = {
+                province: "สมุทรปราหาร",
+                amphoe: "บางพลี",
+                tambon: "บางแก้ว"
+            }
             const options = {
                 headers: {
                     "Content-Type": "application/json"
                 }
+            }
+
+            for(let i in queries) {
+                apiUrl.searchParams.append(i, queries[i]);
             }
 
             try {
@@ -41,28 +49,8 @@ function Things() {
 
     return (
         <div>
-            {error && <p>Error: {error}</p>}
-            {data &&
-                <div className="things">
-                    {data.map((thing, index) => (
-                        <Thing key={index} thing={thing} />
-                    ))}
-                </div>
-            }
-        </div>
-    )
-}
-
-function Thing({thing}) {
-    return (
-        <div className="thing">
-            <img src="" alt="" />
-            <h3 className="thing-name">{thing.name}</h3>
-            <h4 className="thing-category">{thing.category}</h4>
-            <p className="thing-description">{thing.description}</p>
-            <Link to={thing._id} className="more-detail">
-                <button>More detail</button>
-            </Link>
+            <p>{data.WeatherForecasts[0].forecasts[0].data.rh}</p>
+            <p>{data.WeatherForecasts[0].forecasts[0].data.tc}</p>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import NavBar from "./navbar";
+import NavBar from "./navbar_component";
 
 export default function RegisterPage() {
     return (

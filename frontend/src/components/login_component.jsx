@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "./auth";
+import NavBar from "./navbar_component";
 
 export default function LoginPage() {
     return (
-        <LoginForm />
+        <>
+            <NavBar />
+            <LoginForm />
+        </>
     )
 }
 
