@@ -8,23 +8,23 @@ export default function NavBar() {
         logout();
     }
     return (
-        <div className="navbar">
+        <nav>
             <Link to="/"><img className="navbar-logo" src="logo.jpg" alt="logo" /></Link>
-            <div>
-                <Link to="/things"><button className="navbar-things">Things</button></Link>
-                <Link to="/tmd"><button className="navbar-tmd">Weather</button></Link>
+            <ul>
+                <li className="navbar-things"><Link to="/things">Things</Link></li>
+                <li className="navbar-tmd"><Link to="/tmd">Weather</Link></li>
                 {isAuthenticated ? (
                     <>
-                        <p className="navbar-username"></p>
-                        <button className="navbar-logout" onClick={handleLogout}>Logout</button>
+                        <li className="navbar-username"></li>
+                        <li className="navbar-logout" onClick={handleLogout}>Logout</li>
                     </>
                 ) : (
                     <>
-                        <Link to="/login"><button className="navbar-login">Login</button></Link>
-                        <Link to="/register"><button className="navbar-register">Register</button></Link>
+                        <li className="navbar-login"><Link to="/login">Login</Link></li>
+                        <li className="navbar-register"><Link to="/register">Register</Link></li>
                     </>
                 )}
-            </div>
-        </div>
+            </ul>
+        </nav>
     )
 }

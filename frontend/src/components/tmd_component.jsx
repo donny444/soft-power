@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import NavBar from "./navbar_component";
+import Footer from "./footer_component";
 
 export default function TmdPage() {
     return (
         <>
             <NavBar />
-            <Tmd />
+            <p>The feature is not ready.</p>
+            <Footer />
         </>
     )
 }
@@ -49,8 +51,13 @@ function Tmd() {
 
     return (
         <div>
-            <p>{data.WeatherForecasts[0].forecasts[0].data.rh}</p>
-            <p>{data.WeatherForecasts[0].forecasts[0].data.tc}</p>
+            {error && <p>Error: {error}</p>}
+            {data &&
+                <div>
+                    <p>{data.WeatherForecasts[0].forecasts[0].data.rh}</p>
+                    <p>{data.WeatherForecasts[0].forecasts[0].data.tc}</p>
+                </div>
+            }
         </div>
     )
 }

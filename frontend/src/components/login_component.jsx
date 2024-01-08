@@ -2,12 +2,14 @@ import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "./auth";
 import NavBar from "./navbar_component";
+import Footer from "./footer_component";
 
 export default function LoginPage() {
     return (
         <>
             <NavBar />
             <LoginForm />
+            <Footer />
         </>
     )
 }

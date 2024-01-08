@@ -5,6 +5,7 @@ import LoginPage from './components/login_component';
 import RegisterPage from './components/register_component';
 import ThingsPage from './components/things_component';
 import TmdPage from './components/tmd_component';
+import NotSupportPage from './components/notsupport_component';
 import { AuthProvider } from "./components/auth"
 import ProtectedRoute from "./components/protectedroute";
 import RedirectIfAuthenticated from './components/redirectifauthenticated';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/things" element={<ThingsPage />} />
           <Route path="/tmd" element={<TmdPage />} />
+          <Route path="*" element={<NotSupportPage />} />
         </Routes>
       </Router>
     </AuthProvider>

@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import NavBar from "./navbar_component";
+import Footer from "./footer_component";
 
 export default function HomePage() {
     return (
         <>
             <NavBar />
             <Home />
+            <Footer />
         </>
     )
 }

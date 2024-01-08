@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "./navbar_component";
+import Footer from "./footer_component";
 
 export default function RegisterPage() {
     return (
         <>
             <NavBar />
             <RegisterForm />
+            <Footer />
         </>
     )
 }
