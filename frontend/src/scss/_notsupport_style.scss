@@ -1,0 +1,12 @@
+$red: #ed4141;
+$white: #ffffff;
+
+.not-support {
+    background-color: $red;
+    color: $white;
+    border-radius: 4px;
+    text-align: center;
+    width: 300px;
+    padding: 0.8em 0.4em;
+    margin: 300px auto;
+}

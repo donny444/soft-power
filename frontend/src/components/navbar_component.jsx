@@ -10,21 +10,21 @@ export default function NavBar() {
     return (
         <nav>
             <Link to="/"><img className="navbar-logo" src="logo.jpg" alt="logo" /></Link>
-            <ul>
-                <li className="navbar-things"><Link to="/things">Things</Link></li>
-                <li className="navbar-tmd"><Link to="/tmd">Weather</Link></li>
+            <div>
+                <Link to="/things">Things</Link>
+                <Link to="/tmd">Weather</Link>
                 {isAuthenticated ? (
                     <>
-                        <li className="navbar-username"></li>
-                        <li className="navbar-logout" onClick={handleLogout}>Logout</li>
+                        <p className="navbar-username"></p>
+                        <p className="navbar-logout" onClick={handleLogout}>Logout</p>
                     </>
                 ) : (
                     <>
-                        <li className="navbar-login"><Link to="/login">Login</Link></li>
-                        <li className="navbar-register"><Link to="/register">Register</Link></li>
+                        <Link to="/login">Login</Link>
+                        <Link to="/register">Register</Link>
                     </>
                 )}
-            </ul>
+            </div>
         </nav>
     )
 }

@@ -1,35 +1,13 @@
+@use "navbar_style";
+@use "footer_style";
+@use "home_style";
+@use "notsupport_style";
+
 * {
-    font-family: "Sawarabi Mincho", serif;
+    font-family: serif;
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    ul {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 400px;
-        margin: 0;
-        padding-left: 0;
-
-        li {
-            list-style: none;
-
-            a {
-                text-decoration: none;
-            }
-        }
-    }
-
-    .navbar-logo {
-        width: 100px;
-    }
 }

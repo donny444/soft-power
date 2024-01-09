@@ -1,0 +1,19 @@
+$grey: #abafb0;
+$white: #ffffff;
+$black: #252122;
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+
+    p {
+        text-align: center;
+        color: $white;
+
+        span {
+            color: $black;
+        }
+    }
+}

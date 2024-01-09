@@ -1,0 +1,73 @@
+$white: #ffffff;
+$grey: #abafb0;
+$black: #252122;
+$sawarabi: "Sawarabi Mincho", serif;
+$opensans: "Open Sans", sans-serif;
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $grey url("assets/images/thailand.jpg") center;
+    color: $white;
+    height: 500px;
+
+    h1 {
+        margin: 0;
+        font-family: $sawarabi;
+    }
+
+    h3 {
+        font-family: $opensans;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+
+        button {
+            width: 130px;
+            border-radius: 4px;
+            border: 0;
+            padding: 0.8em;
+            color: $white;
+            font-family: $opensans;
+        }
+
+        .things-button {
+            background-color: lightgreen;
+        }
+
+        .tmd-button {
+            background-color: blue;
+        }
+    }
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1em auto;
+
+    div {
+        max-width: 700px;
+
+        h2 {
+            font-family: $sawarabi;
+        }
+        
+        p {
+            font-family: $opensans;
+        }
+    }
+
+    img {
+        width: 30%;
+        height: 30%;
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
