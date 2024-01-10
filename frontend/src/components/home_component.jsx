@@ -57,22 +57,24 @@ function Section() {
     return (
         <section>
             <h2>Thailand Featured Soft Power</h2>
-            <section>
-                <h4>Mango with Sticky Rice</h4>
-                <img src="src/assets/images/mango_with_sticky_rice.jpg" alt="mango_with_sticky_rice" />
-            </section>
-            <section>
-                <h4>Y-Series</h4>
-                <img src="src/assets/images/y_series.jpg" alt="y_series" />
-            </section>
-            <section>
-                <h4>T-POP</h4>
-                <img src="src/assets/images/t_pop.jpg" alt="t_pop" />
-            </section>
-            <section>
-                <h4>Thai Foods</h4>
-                <img src="src/assets/images/thai_food.jpg" alt="thai_food" />
-            </section>
+            <div>
+                <div>
+                    <h4>Mango with Sticky Rice</h4>
+                    <img src="src/assets/images/mango_with_sticky_rice.jpg" alt="mango_with_sticky_rice" />
+                </div>
+                <div>
+                    <h4>Y-Series</h4>
+                    <img src="src/assets/images/y_series.jpg" alt="y_series" />
+                </div>
+                <div>
+                    <h4>T-POP</h4>
+                    <img src="src/assets/images/t_pop.jpg" alt="t_pop" />
+                </div>
+                <div>
+                    <h4>Thai Foods</h4>
+                    <img src="src/assets/images/thai_food.jpg" alt="thai_food" />
+                </div>
+            </div>
         </section>
     )
 }

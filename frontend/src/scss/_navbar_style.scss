@@ -4,9 +4,11 @@ $opensans: "Open Sans", sans-serif;
 
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    background-color: $white;
 
     div {
         display: flex;
@@ -33,5 +35,18 @@ nav {
 
     .navbar-logo {
         height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+
+        div {
+            height: 50px
+        }
     }
 }

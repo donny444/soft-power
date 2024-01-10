@@ -9,6 +9,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background: $grey url("assets/images/thailand.jpg") center;
     color: $white;
     height: 500px;
@@ -48,8 +49,10 @@ main {
 
 article {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 90%;
+    max-width: 1080px;
     margin: 1em auto;
 
     div {
@@ -69,5 +72,79 @@ article {
         height: 30%;
         max-width: 300px;
         max-height: 300px;
+        border-radius: 4px;
+        margin: auto;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: $grey;
+    color: $white;
+    text-align: center;
+    padding-bottom: 2em;
+    margin: 1em 0;
+
+    h2, h4 {
+        font-family: $sawarabi;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-evenly;
+        column-gap: 20px;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 200px;
+            border-radius: 4px;
+            background-color: lightgrey;
+            color: $black;
+            padding-bottom: 1.4em;
+        }
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    article {
+        flex-direction: column;
+
+        img {
+            width: 60%;
+        }
+    }
+
+    section {
+        div {
+            grid-template-columns: auto auto;
+            gap: 10px;
+            justify-content: center;
+
+            div {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        div {
+            grid-template-columns: auto;
+            row-gap: 8px;
+            justify-content: center;
+
+            div {
+                width: 360px;
+            }
+        }
     }
 }
