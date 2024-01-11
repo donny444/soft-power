@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import NavBar from "./navbar_component";
 import Footer from "./footer_component";
 
@@ -22,7 +22,7 @@ function RegisterForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const apiUrl = "http://localhost:3715/register";
+        const apiUrl = "http://localhost:5174/register";
         const options = {
             method: "POST",
             headers: {
@@ -46,9 +46,9 @@ function RegisterForm() {
     }
 
     return (
-        <div>
-            <h2 className="auth-header">Register</h2>
+        <div className="auth-block">
             <form className="auth-form" onSubmit={handleSubmit}>
+                <h2 className="auth-header">Register</h2>
                 <div className="auth-field">
                     <label className="auth-label">Username:</label>
                     <input
@@ -72,7 +72,10 @@ function RegisterForm() {
                         maxLength={16}
                         required />
                 </div>
-                <input className="auth-submit" type="submit" value="Register"></input>
+                <div className="auth-decide">
+                    <Link to="/login"><p className="auth-switch">Have an account? Login here.</p></Link>
+                    <input className="auth-submit" type="submit" value="Register"></input>
+                </div>
             </form>
             {error && <p>{error}</p>}
         </div>

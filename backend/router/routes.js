@@ -7,7 +7,7 @@ const route = express.Router();
 
 route.get("/tmd", Tmd);
 route.get("/things", Things);
-route.post("login", Login);
+route.post("/login", Login);
 route.post("/register", Register);
 
 module.exports = route;

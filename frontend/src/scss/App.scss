@@ -1,11 +1,15 @@
+$black: #252122;
+
 @use "navbar_style";
 @use "footer_style";
 @use "home_style";
+@use "auth_style";
 @use "notsupport_style";
 
 * {
     font-family: serif;
     box-sizing: border-box;
+    color: $black;
 }
 
 body {

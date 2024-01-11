@@ -63,15 +63,16 @@ main {
   align-items: center;
   text-align: center;
   background: #abafb0 url("assets/images/thailand.jpg") center;
-  color: #ffffff;
   height: 500px;
 }
 main h1 {
-  margin: 0;
   font-family: "Sawarabi Mincho", serif;
+  margin: 0;
+  color: #ffffff;
 }
 main h3 {
   font-family: "Open Sans", sans-serif;
+  color: #ffffff;
 }
 main div {
   display: flex;
@@ -87,10 +88,10 @@ main div button {
   font-family: "Open Sans", sans-serif;
 }
 main div .things-button {
-  background-color: lightgreen;
+  background-color: #6ed442;
 }
 main div .tmd-button {
-  background-color: blue;
+  background-color: #4163ff;
 }
 
 article {
@@ -123,7 +124,6 @@ section {
   display: flex;
   flex-direction: column;
   background-color: #abafb0;
-  color: #ffffff;
   text-align: center;
   padding-bottom: 2em;
   margin: 1em 0;
@@ -144,7 +144,7 @@ section div div {
   align-items: center;
   width: 200px;
   border-radius: 4px;
-  background-color: lightgrey;
+  background-color: #e6e6e6;
   color: #252122;
   padding-bottom: 1.4em;
 }
@@ -162,10 +162,7 @@ section img {
   section div {
     grid-template-columns: auto auto;
     gap: 10px;
-    justify-content: center;
-  }
-  section div div {
-    width: 300px;
+    justify-content: space-evenly;
   }
 }
 @media (max-width: 480px) {
@@ -175,9 +172,95 @@ section img {
     justify-content: center;
   }
   section div div {
-    width: 360px;
+    width: 300px;
   }
 }
+.auth-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 600px;
+  height: 300px;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  padding: 1em;
+}
+
+.auth-header {
+  font-family: "Sawarabi Mincho", serif;
+  text-align: center;
+  margin: 0;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.auth-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.auth-input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #252122;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+}
+
+.auth-input:hover {
+  border: 2px solid #252122;
+}
+
+.auth-input:focus {
+  border: 2px solid #252122;
+}
+
+.auth-decide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.auth-decide a {
+  text-decoration: none;
+}
+.auth-decide a:hover {
+  text-decoration: underline;
+}
+
+.auth-switch {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #252122;
+  margin: 0;
+}
+
+.auth-submit {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 0 20px;
+  border: 2px solid #ffffff;
+}
+
+.auth-submit:hover {
+  border: 2px solid #252122;
+}
+
 .not-support {
   background-color: #ed4141;
   color: #ffffff;
@@ -191,6 +274,7 @@ section img {
 * {
   font-family: serif;
   box-sizing: border-box;
+  color: #252122;
 }
 
 body {

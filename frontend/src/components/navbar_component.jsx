@@ -15,7 +15,7 @@ export default function NavBar() {
                 <Link to="/tmd">Weather</Link>
                 {isAuthenticated ? (
                     <>
-                        <p className="navbar-username"></p>
+                        <p className="navbar-username">username</p>
                         <p className="navbar-logout" onClick={handleLogout}>Logout</p>
                     </>
                 ) : (

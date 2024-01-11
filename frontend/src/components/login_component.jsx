@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useAuth } from "./auth";
 import NavBar from "./navbar_component";
 import Footer from "./footer_component";
@@ -26,7 +26,7 @@ function LoginForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const apiUrl = "http://localhost:5714/login";
+        const apiUrl = "http://localhost:5174/login";
         const options = {
             method: "POST",
             headers: {
@@ -55,9 +55,9 @@ function LoginForm() {
     }
 
     return (
-        <div>
-            <h2 className="auth-header">Login</h2>
+        <div className="auth-block">
             <form className="auth-form" onSubmit={handleSubmit}>
+                <h2 className="auth-header">Login</h2>
                 <div className="auth-field">
                     <label className="auth-label">Username:</label>
                     <input
@@ -81,7 +81,10 @@ function LoginForm() {
                         maxLength={16}
                         required />
                 </div>
-                <input className="auth-submit" type="submit" value="Login"></input>
+                <div className="auth-decide">
+                    <Link to="/register"><p className="auth-switch">Don't have an account? Register here.</p></Link>
+                    <input className="auth-submit" type="submit" value="Login"></input>
+                </div>
             </form>
             {error && <p>{error}</p>}
         </div>
