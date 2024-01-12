@@ -1,6 +1,10 @@
-$grey: #abafb0;
 $white: #ffffff;
+$lightgrey: #e6e6e6;
+$grey: #abafb0;
 $black: #252122;
+$sawarabi: "Sawarabi Mincho", serif;
+$opensans: "Open Sans", sans-serif;
+$border-radius: 4px;
 
 footer {
     display: flex;
@@ -9,10 +13,14 @@ footer {
     background-color: $grey;
 
     p {
+        font-family: $opensans;
+        font-weight: 600;
         text-align: center;
         color: $white;
 
         span {
+            font-family: $opensans;
+            font-weight: 600;
             color: $black;
         }
     }

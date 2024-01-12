@@ -45,7 +45,7 @@ function LoginForm() {
             }
             const data = await response.json();
             localStorage.setItem("userToken", data.token);
-            localStorage.setItem("userId", data.id);
+            localStorage.setItem("userName", data.user.username);
             checkAuth();
             const from = location.state?.from || "/";
             navigate(from);

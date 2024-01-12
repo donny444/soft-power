@@ -17,8 +17,8 @@ main {
 
     h1 {
         font-family: $sawarabi;
-        margin: 0;
         color: $white;
+        margin: 0;
     }
 
     h3 {
@@ -32,20 +32,31 @@ main {
         width: 300px;
 
         button {
+            font-family: $opensans;
+            font-weight: 600;
             width: 130px;
             border-radius: $border-radius;
-            border: 0;
-            padding: 0.8em;
             color: $white;
-            font-family: $opensans;
+            padding: 0.8em;
+            border: 0;
         }
 
         .things-button {
             background-color: #6ed442;
         }
 
+        .things-button:hover {
+            background-color: $white;
+            color: #6ed442;
+        }
+
         .tmd-button {
             background-color: #4163ff;
+        }
+
+        .tmd-button:hover {
+            background-color: $white;
+            color: #4163ff;
         }
     }
 }
@@ -67,6 +78,15 @@ article {
         
         p {
             font-family: $opensans;
+
+            span {
+                font-family: $opensans;
+                font-weight: 600;
+            }
+            
+            a {
+                font-family: $opensans;
+            }
         }
     }
 

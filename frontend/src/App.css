@@ -49,10 +49,14 @@ footer {
   background-color: #abafb0;
 }
 footer p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   text-align: center;
   color: #ffffff;
 }
 footer p span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   color: #252122;
 }
 
@@ -67,8 +71,8 @@ main {
 }
 main h1 {
   font-family: "Sawarabi Mincho", serif;
-  margin: 0;
   color: #ffffff;
+  margin: 0;
 }
 main h3 {
   font-family: "Open Sans", sans-serif;
@@ -80,18 +84,27 @@ main div {
   width: 300px;
 }
 main div button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   width: 130px;
   border-radius: 4px;
-  border: 0;
-  padding: 0.8em;
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  padding: 0.8em;
+  border: 0;
 }
 main div .things-button {
   background-color: #6ed442;
 }
+main div .things-button:hover {
+  background-color: #ffffff;
+  color: #6ed442;
+}
 main div .tmd-button {
   background-color: #4163ff;
+}
+main div .tmd-button:hover {
+  background-color: #ffffff;
+  color: #4163ff;
 }
 
 article {
@@ -109,6 +122,13 @@ article div h2 {
   font-family: "Sawarabi Mincho", serif;
 }
 article div p {
+  font-family: "Open Sans", sans-serif;
+}
+article div p span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+article div p a {
   font-family: "Open Sans", sans-serif;
 }
 article img {
@@ -179,7 +199,8 @@ section img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 900px;
+  background: #ffffff url("assets/images/bangkok.jpg") center;
+  height: 600px;
 }
 
 .auth-form {
@@ -249,6 +270,7 @@ section img {
 
 .auth-submit {
   font-family: "Open Sans", sans-serif;
+  font-weight: 600;
   font-size: 16px;
   height: 40px;
   background-color: #ffffff;
@@ -259,6 +281,64 @@ section img {
 
 .auth-submit:hover {
   border: 2px solid #252122;
+}
+
+@media (max-width: 650px) {
+  .auth-form {
+    width: 90%;
+  }
+}
+.things {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  max-width: 720px;
+  margin: 1em auto;
+}
+
+.thing {
+  background-color: #e6e6e6;
+  color: #252122;
+  border-radius: 4px;
+  padding: 1em;
+}
+
+.thing-name {
+  font-family: "Sawarabi Mincho", serif;
+  margin: 0;
+}
+
+.thing-category {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  background-color: #abafb0;
+  border-radius: 4px;
+  width: fit-content;
+  padding: 3px 9px;
+  margin: 14px 0;
+}
+
+.thing-description {
+  font-family: "Open Sans", sans-serif;
+}
+
+.more-detail {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  background-color: #4163ff;
+  color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  height: 2.5em;
+}
+
+.more-detail:hover {
+  background-color: #ffffff;
+  color: #4163ff;
 }
 
 .not-support {

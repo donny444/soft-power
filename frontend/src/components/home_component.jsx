@@ -22,7 +22,7 @@ function Home() {
     )
 }
 
-function Main() {
+export function Main() {
     return (
         <main>
             <h1>Know Thai Soft Power</h1>
@@ -46,7 +46,8 @@ function Article() {
                     Joseph Nye of Harvard University explained that with soft power, "the best propaganda is not propaganda", 
                     further explaining that during the Information Age, "credibility is the scarcest resource".
                 </p>
-                <p>Soft power <b>is not</b> the same thing as cultural diplomacy.</p>
+                <p>Soft power <span>is not</span> the same thing as cultural diplomacy.</p>
+                <p>Source: <a href="https://en.wikipedia.org/wiki/Soft_power">Wikipedia</a></p>
             </div>
             <img src="src/assets/images/joseph_nye.jpg" alt="joseph_nye" />
         </article>

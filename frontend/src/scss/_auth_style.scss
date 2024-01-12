@@ -10,7 +10,8 @@ $border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 900px;
+    background: $white url("assets/images/bangkok.jpg") center;
+    height: 600px;
 }
 
 .auth-form {
@@ -82,6 +83,7 @@ $border-radius: 4px;
 
 .auth-submit {
     font-family: $opensans;
+    font-weight: 600;
     font-size: 16px;
     height: 40px;
     background-color: $white;
@@ -92,4 +94,10 @@ $border-radius: 4px;
 
 .auth-submit:hover {
     border: 2px solid $black;
+}
+
+@media (max-width: 650px) {
+    .auth-form {
+        width: 90%;
+    }
 }

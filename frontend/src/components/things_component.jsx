@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "./navbar_component";
+import { Main } from "./home_component";
+import Footer from "./footer_component";
 
 export default function ThingsPage() {
     return (
         <>
             <NavBar />
+            <Main />
             <Things />
+            <Footer />
         </>
     )
 }
@@ -60,8 +64,8 @@ function Thing({thing}) {
             <h3 className="thing-name">{thing.name}</h3>
             <h4 className="thing-category">{thing.category}</h4>
             <p className="thing-description">{thing.description}</p>
-            <Link to={thing._id} className="more-detail">
-                <button>More detail</button>
+            <Link to={thing._id}>
+                <button className="more-detail">More detail</button>
             </Link>
         </div>
     )
