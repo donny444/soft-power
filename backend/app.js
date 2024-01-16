@@ -20,7 +20,9 @@ mongoose.connection.on("connected", () => console.log("Database connected"));
 mongoose.connection.on("error", () => console.log("Database error occured"));
 
 const routes = require("./router/routes.js");
+const thingsRoutes = require("./router/things_routes.js");
 
 app.use("/", routes);
+app.use("/things", thingsRoutes);
 
 module.exports = app;

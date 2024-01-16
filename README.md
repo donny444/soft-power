@@ -3,6 +3,7 @@
 **Front-End**
 - Vite
 - React
+- SCSS
 
 **Back-End**
 - Node.js
