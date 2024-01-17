@@ -1,6 +1,5 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useParams } from 'react-router-dom';
 import HomePage from './components/home_component';
 import LoginPage from './components/login_component';
 import RegisterPage from './components/register_component';
