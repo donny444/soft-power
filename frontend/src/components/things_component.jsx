@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { useAuth } from "./auth";
 import NavBar from "./navbar_component";
 import { Main } from "./home_component";
 import Footer from "./footer_component";
@@ -73,17 +74,18 @@ function Thing({thing}) {
 }
 
 export function ThingPage() {
-    const { _id } = useParams();
+
     return (
         <>
             <NavBar />
-            <SpecificThing _id={_id}/>
+            <SpecificThing />
             <Footer />
         </>
     )
 }
 
-function SpecificThing({ _id }) {
+function SpecificThing() {
+    const { _id } = useParams();
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
 
@@ -115,12 +117,58 @@ function SpecificThing({ _id }) {
         <div>
             {error && <p>Error: {error}</p>}
             {data &&
-                <div>
-                    <p>{data.name}</p>
-                    <p>{data.createdAt}</p>
-                    <p>{data.updatedAt}</p>
+                <div className="specific-data">
+                    <h2>{data.name}</h2>
+                    <h4>{data.category}</h4>
+                    <p>{data.description}</p>
                 </div>
             }
         </div>
     )
+}
+
+function CommentSection() {
+    const isAuthenticated = useAuth();
+    const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const apiUrl = `http://localhost:5174/things/${_id}`;
+            const options = {
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+
+            try {
+                const response = await fetch(apiUrl, options);
+                if(!response.ok) {
+                    const errMsg = await response.text();
+                    throw new Error(errMsg || "Network response was not ok");
+                }
+                const data = await response.json();
+                setData(data);
+            } catch(err) {
+                setError(err.message);
+            }
+        }
+        fetchData();
+    }, []);
+
+    return (
+        <div>
+            {isAuthenticated ? (
+                <form >
+                    <input type="text" maxLength={100} required />
+                    <input type="submit" value="Comment" />
+                </form>
+            ) : (<></>)}
+
+        </div>
+    )
+}
+
+function Comments() {
+
 }

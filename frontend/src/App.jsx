@@ -17,11 +17,18 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/things" element={<ThingsPage />}>
-            <Route path=":_id" element={<ThingPage />} />
-          </Route>
+          <Route path="/login" element={
+            <RedirectIfAuthenticated>
+              <LoginPage />
+            </RedirectIfAuthenticated>
+          } />
+          <Route path="/register" element={
+            <RedirectIfAuthenticated>
+              <RegisterPage />
+            </RedirectIfAuthenticated>
+          } />
+          <Route path="/things" element={<ThingsPage />} />
+          <Route path="/things/:_id" element={<ThingPage />} />
           <Route path="/tmd" element={<TmdPage />} />
           <Route path="*" element={<NotSupportPage />} />
         </Routes>
