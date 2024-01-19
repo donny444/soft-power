@@ -21,8 +21,10 @@ mongoose.connection.on("error", () => console.log("Database error occured"));
 
 const routes = require("./router/routes.js");
 const thingsRoutes = require("./router/things_routes.js");
+const commentRoutes = require("./router/comments_routes.js");
 
 app.use("/", routes);
 app.use("/things", thingsRoutes);
+app.use("/comments", commentRoutes);
 
 module.exports = app;

@@ -1,3 +1,7 @@
+## Description
+
+This is practicing full-stack project of website about soft power concept which has details on thai soft power and its definition. using knowledge of routing, authentication, API and database CRUD.
+
 ## Tech Stack
 
 **Front-End**

@@ -17,7 +17,7 @@ const thingSchema = new Schema({
         type: String,
         required: true
     },
-    path: String,
+    fileName: String,
     createdAt: {
         type: Date,
         default: () => Date.now(),

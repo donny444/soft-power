@@ -7,6 +7,11 @@ const commentSchema = new Schema({
         ref: "User",
         required: true
     },
+    thing: {
+        type: SchemaTypes.ObjectId,
+        ref: "Thing",
+        required: true
+    },
     detail: {
         type: String,
         maxLength: 100,

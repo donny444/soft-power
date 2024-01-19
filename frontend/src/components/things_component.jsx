@@ -5,7 +5,7 @@ import NavBar from "./navbar_component";
 import { Main } from "./home_component";
 import Footer from "./footer_component";
 
-export function ThingsPage() {
+export default function ThingsPage() {
     return (
         <>
             <NavBar />
@@ -60,115 +60,16 @@ function Things() {
 
 function Thing({thing}) {
     const specificThing = `/things/${thing._id}`;
+    const imagePath = `src/assets/images/${thing.fileName}`;
     return (
         <div className="thing">
-            <img src="" alt="" />
+            <img src={imagePath} alt="" />
             <h3 className="thing-name">{thing.name}</h3>
             <h4 className="thing-category">{thing.category}</h4>
             <p className="thing-description">{thing.description}</p>
-            <Link to={thing._id}>
+            <Link to={specificThing}>
                 <button className="more-detail">More detail</button>
             </Link>
         </div>
     )
-}
-
-export function ThingPage() {
-
-    return (
-        <>
-            <NavBar />
-            <SpecificThing />
-            <Footer />
-        </>
-    )
-}
-
-function SpecificThing() {
-    const { _id } = useParams();
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const apiUrl = `http://localhost:5174/things/${_id}`;
-            const options = {
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }
-
-            try {
-                const response = await fetch(apiUrl, options);
-                if(!response.ok) {
-                    const errMsg = await response.text();
-                    throw new Error(errMsg || "Network response was not ok");
-                }
-                const data = await response.json();
-                setData(data);
-            } catch(err) {
-                setError(err.message);
-            }
-        }
-        fetchData();
-    }, []);
-
-    return (
-        <div>
-            {error && <p>Error: {error}</p>}
-            {data &&
-                <div className="specific-data">
-                    <h2>{data.name}</h2>
-                    <h4>{data.category}</h4>
-                    <p>{data.description}</p>
-                </div>
-            }
-        </div>
-    )
-}
-
-function CommentSection() {
-    const isAuthenticated = useAuth();
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const apiUrl = `http://localhost:5174/things/${_id}`;
-            const options = {
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }
-
-            try {
-                const response = await fetch(apiUrl, options);
-                if(!response.ok) {
-                    const errMsg = await response.text();
-                    throw new Error(errMsg || "Network response was not ok");
-                }
-                const data = await response.json();
-                setData(data);
-            } catch(err) {
-                setError(err.message);
-            }
-        }
-        fetchData();
-    }, []);
-
-    return (
-        <div>
-            {isAuthenticated ? (
-                <form >
-                    <input type="text" maxLength={100} required />
-                    <input type="submit" value="Comment" />
-                </form>
-            ) : (<></>)}
-
-        </div>
-    )
-}
-
-function Comments() {
-
 }

@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from './components/home_component';
 import LoginPage from './components/login_component';
 import RegisterPage from './components/register_component';
-import { ThingsPage, ThingPage } from './components/things_component';
+import ThingsPage from './components/things_component';
+import ThingPage from './components/thing_component';
 import TmdPage from './components/tmd_component';
 import NotSupportPage from './components/notsupport_component';
 import { AuthProvider } from "./components/auth"
