@@ -51,11 +51,11 @@ function SpecificThing({ _id }) {
         <div>
             {error && <p>Error: {error}</p>}
             {data &&
-                <div className="specific-data">
-                    <img src={`src/assets/images/${data.fileName}`} alt="" />
-                    <h2>{data.name}</h2>
-                    <h4>{data.category}</h4>
-                    <p>{data.description}</p>
+                <div className="specific-thing">
+                    <img className="specific-image" src={`src/assets/images/${data.fileName}`} alt="" />
+                    <h2 className="specific-name">{data.name}</h2>
+                    <h4 className="specific-category">{data.category}</h4>
+                    <p className="specific-description">{data.description}</p>
                 </div>
             }
         </div>
@@ -72,6 +72,7 @@ function CommentSection({ _id }) {
         const fetchData = async () => {
             const apiUrl = `http://localhost:5174/comments/${_id}`;
             const options = {
+                method: "GET",
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -92,8 +93,7 @@ function CommentSection({ _id }) {
         fetchData();
     }, []);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleSubmit = async () => {
         const apiUrl = `http://localhost:5174/comments/${_id}`;
         const options = {
             method: "POST",
@@ -103,6 +103,7 @@ function CommentSection({ _id }) {
             },
             body: JSON.stringify({
                 user: localStorage.getItem("userId"),
+                username: localStorage.getItem("userName"),
                 detail
             })
         }
@@ -120,15 +121,15 @@ function CommentSection({ _id }) {
     return (
         <div>
             {isAuthenticated ? (
-                <form onSubmit={handleSubmit}>
-                    <input type="text" maxLength={100} onChange={(e) => setDetail(e.target.value)} required />
-                    <input type="submit" value="Comment" />
+                <form className="comment-form" onSubmit={handleSubmit}>
+                    <input className="comment-input" type="text" maxLength={100} onChange={(e) => setDetail(e.target.value)} required />
+                    <input className="comment-submit" type="submit" value="Comment" />
                 </form>
             ) : (<></>)}
             {error && <p>Error: {error}</p>}
             {data && 
-                <div>
-                    {data.map((comment, index) => (
+                <div className="comments">
+                    {[...data].reverse().map((comment, index) => (
                         <Comment key={index} comment={comment} />
                     ))}
                 </div>
@@ -139,9 +140,10 @@ function CommentSection({ _id }) {
 
 function Comment({ comment }) {
     return (
-        <div>
-            <h3>{comment.user.username}</h3>
-            <p>{comment.detail}</p>
+        <div className="comment">
+            <h3 className="comment-username">{comment.username}</h3>
+            <p className="comment-date">{comment.commentedAt}</p>
+            <p className="comment-detail">{comment.detail}</p>
         </div>
     )
 }

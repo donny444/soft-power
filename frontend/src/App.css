@@ -6,6 +6,9 @@ nav {
   height: 50px;
   background-color: #ffffff;
 }
+nav a {
+  height: 50px;
+}
 nav div {
   display: flex;
   justify-content: center;
@@ -14,7 +17,7 @@ nav div {
   height: inherit;
   margin: 0;
 }
-nav div a {
+nav div a, nav div p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +26,7 @@ nav div a {
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
 }
-nav div a:hover {
+nav div a:hover, nav div p:hover {
   background-color: #abafb0;
   color: #ffffff;
 }
@@ -39,6 +42,7 @@ nav .navbar-logo {
     height: 100px;
   }
   nav div {
+    width: 100%;
     height: 50px;
   }
 }
@@ -294,7 +298,6 @@ section img {
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
-  max-width: 720px;
   margin: 1em auto;
 }
 
@@ -339,6 +342,53 @@ section img {
 .more-detail:hover {
   background-color: #ffffff;
   color: #4163ff;
+}
+
+@media (max-width: 900px) {
+  .things {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 480px) {
+  .things {
+    grid-template-columns: auto;
+  }
+}
+.specific-thing {
+  text-align: center;
+  height: 400px;
+  background-color: #abafb0;
+}
+
+.specfic-image {
+  width: 50%;
+}
+
+.specific-name, .specific-category, .specific-description {
+  font-family: "Sawarabi Mincho", serif;
+  color: #ffffff;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5em 0;
+}
+
+.comment {
+  width: 90%;
+  max-width: 960px;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  padding: 0 0.5em;
+  margin: 0.5em 0;
+}
+
+.comment-username, .comment-date, .comment-detail {
+  font-family: "Open Sans", sans-serif;
+  color: #252122;
 }
 
 .not-support {

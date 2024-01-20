@@ -1,9 +1,15 @@
 const mongoose = require("mongoose");
 const { Schema, SchemaTypes, model } = mongoose;
+const { userSchema } = require("../model/user_model.js");
 
 const commentSchema = new Schema({
     user: {
         type: SchemaTypes.ObjectId,
+        ref: "User",
+        required: true
+    },
+    username: {
+        type: String,
         ref: "User",
         required: true
     },
@@ -16,6 +22,11 @@ const commentSchema = new Schema({
         type: String,
         maxLength: 100,
         required: true
+    },
+    commentedAt: {
+        type: Date,
+        default: () => Date.now(),
+        immutable: true
     }
 })
 

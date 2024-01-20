@@ -1,0 +1,43 @@
+$white: #ffffff;
+$lightgrey: #e6e6e6;
+$grey: #abafb0;
+$black: #252122;
+$sawarabi: "Sawarabi Mincho", serif;
+$opensans: "Open Sans", sans-serif;
+$border-radius: 4px;
+
+.specific-thing {
+    text-align: center;
+    height: 400px;
+    background-color: $grey;
+}
+
+.specfic-image {
+    width: 50%;
+}
+
+.specific-name, .specific-category, .specific-description {
+    font-family: $sawarabi;
+    color: $white;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5em 0;
+}
+.comment {
+    width: 90%;
+    max-width: 960px;
+    background-color: $lightgrey;
+    border-radius: $border-radius;
+    padding: 0 0.5em;
+    margin: 0.5em 0;
+}
+
+.comment-username, .comment-date, .comment-detail {
+    font-family: $opensans;
+    color: $black;
+}

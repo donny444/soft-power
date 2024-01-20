@@ -12,7 +12,6 @@ $border-radius: 4px;
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
-    max-width: 720px;
     margin: 1em auto;
 }
 
@@ -57,4 +56,16 @@ $border-radius: 4px;
 .more-detail:hover {
     background-color: $white;
     color: #4163ff;
+}
+
+@media (max-width: 900px) {
+    .things {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .things {
+        grid-template-columns: auto;
+    }
 }

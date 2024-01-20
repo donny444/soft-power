@@ -2,7 +2,7 @@ const Comment = require("../model/comment_model.js");
 
 async function AddComment(req, res) {
     const { thing } = req.params;
-    const { user, detail } = req.body;
+    const { user, username, detail } = req.body;
     
     try {
         if(!detail) {
@@ -14,6 +14,7 @@ async function AddComment(req, res) {
 
         const addComment = new Comment({
             user,
+            username,
             thing,
             detail
         });

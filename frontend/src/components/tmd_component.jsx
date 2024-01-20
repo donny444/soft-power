@@ -6,7 +6,7 @@ export default function TmdPage() {
     return (
         <>
             <NavBar />
-            <p>The feature is not ready.</p>
+            <p className="not-support">The feature is not ready.</p>
             <Footer />
         </>
     )
