@@ -44,9 +44,9 @@ function LoginForm() {
                 throw new Error(errMsg || "Failed to login");
             }
             const data = await response.json();
-            localStorage.setItem("userToken", data.token);
-            localStorage.setItem("userName", data.user.username);
-            localStorage.setItem("userId", data.user._id);
+            sessionStorage.setItem("userToken", data.token);
+            sessionStorage.setItem("userName", data.user.username);
+            sessionStorage.setItem("userId", data.user._id);
             checkAuth();
             const from = location.state?.from || "/";
             navigate(from);

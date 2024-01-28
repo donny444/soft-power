@@ -9,7 +9,7 @@ export default function NavBar() {
     }
     return (
         <nav>
-            <Link to="/"><img className="navbar-logo" src="logo.jpg" alt="logo" /></Link>
+            <Link to="/"><img className="navbar-logo" src="/logo.jpg" alt="logo" /></Link>
             <div>
                 <Link to="/things">Things</Link>
                 <Link to="/tmd">Weather</Link>

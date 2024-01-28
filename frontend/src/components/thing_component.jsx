@@ -52,7 +52,7 @@ function SpecificThing({ _id }) {
             {error && <p>Error: {error}</p>}
             {data &&
                 <div className="specific-thing">
-                    <img className="specific-image" src={`src/assets/images/${data.fileName}`} alt="" />
+                    <img className="specific-image" src={`/src/assets/images/${data.fileName}`} alt="" />
                     <h2 className="specific-name">{data.name}</h2>
                     <h4 className="specific-category">{data.category}</h4>
                     <p className="specific-description">{data.description}</p>
@@ -102,8 +102,8 @@ function CommentSection({ _id }) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                user: localStorage.getItem("userId"),
-                username: localStorage.getItem("userName"),
+                user: sessionStorage.getItem("userId"),
+                username: sessionStorage.getItem("userName"),
                 detail
             })
         }
