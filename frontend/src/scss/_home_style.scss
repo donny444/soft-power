@@ -115,8 +115,8 @@ section {
     div {
         display: grid;
         grid-template-columns: auto auto auto auto;
+        gap: 20px;
         justify-content: space-evenly;
-        column-gap: 20px;
         div {
             display: flex;
             flex-direction: column;
@@ -147,8 +147,11 @@ section {
     section {
         div {
             grid-template-columns: auto auto;
-            gap: 10px;
             justify-content: space-evenly;
+
+            div {
+                width: 230px;
+            }
         }
     }
 }
@@ -157,7 +160,6 @@ section {
     section {
         div {
             grid-template-columns: auto;
-            row-gap: 8px;
             justify-content: center;
 
             div {

@@ -158,8 +158,8 @@ section h2, section h4 {
 section div {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  gap: 20px;
   justify-content: space-evenly;
-  column-gap: 20px;
 }
 section div div {
   display: flex;
@@ -185,14 +185,15 @@ section img {
   }
   section div {
     grid-template-columns: auto auto;
-    gap: 10px;
     justify-content: space-evenly;
+  }
+  section div div {
+    width: 230px;
   }
 }
 @media (max-width: 480px) {
   section div {
     grid-template-columns: auto;
-    row-gap: 8px;
     justify-content: center;
   }
   section div div {
@@ -287,7 +288,7 @@ section img {
   border: 2px solid #252122;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 640px) {
   .auth-form {
     width: 90%;
   }
@@ -295,6 +296,7 @@ section img {
 .things {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  gap: 20px;
   justify-content: space-evenly;
   align-items: center;
   width: 80%;
@@ -305,7 +307,12 @@ section img {
   background-color: #e6e6e6;
   color: #252122;
   border-radius: 4px;
+  width: 230px;
   padding: 1em;
+}
+
+.thing-image {
+  width: 100%;
 }
 
 .thing-name {
@@ -348,10 +355,16 @@ section img {
   .things {
     grid-template-columns: auto auto;
   }
+  .thing {
+    width: 200px;
+  }
 }
 @media (max-width: 480px) {
   .things {
     grid-template-columns: auto;
+  }
+  .thing {
+    width: 300px;
   }
 }
 .specific-thing {

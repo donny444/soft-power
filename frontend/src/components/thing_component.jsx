@@ -45,14 +45,12 @@ function SpecificThing({ _id }) {
         fetchData();
     }, []);
 
-    //const imagePath = `src/assets/images/${data.fileName}`;
-
     return (
         <div>
             {error && <p>Error: {error}</p>}
             {data &&
                 <div className="specific-thing">
-                    <img className="specific-image" src={`/src/assets/images/${data.fileName}`} alt="" />
+                    <img className="specific-image" src={`/src/assets/images/${data.fileName}`} alt={data.name} />
                     <h2 className="specific-name">{data.name}</h2>
                     <h4 className="specific-category">{data.category}</h4>
                     <p className="specific-description">{data.description}</p>

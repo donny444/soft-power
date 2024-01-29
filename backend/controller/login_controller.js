@@ -1,7 +1,6 @@
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const mongoose = require("mongoose");
 const User = require("../model/user_model");
 
 async function Login(req, res) {
@@ -33,6 +32,7 @@ async function Login(req, res) {
         return res.status(200).json({ user, token });
     } catch(err) {
         console.error(err);
+        return res.status(500).json({ message: "Unexpected Error" });
     }
 }
 

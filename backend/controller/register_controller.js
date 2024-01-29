@@ -1,6 +1,5 @@
 require("dotenv").config();
 const bcrypt = require("bcryptjs");
-const mongoose = require("mongoose");
 const User = require("../model/user_model.js");
 
 async function Register(req, res) {
@@ -35,6 +34,7 @@ async function Register(req, res) {
         return res.status(201).json({ message: "User registered successfully" });
     } catch(err) {
         console.error(err);
+        return res.status(500).json({ message: "Unexpected Error" });
     }
 }
 

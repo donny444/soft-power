@@ -9,6 +9,7 @@ $border-radius: 4px;
 .things {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    gap: 20px;
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
@@ -19,7 +20,12 @@ $border-radius: 4px;
     background-color: $lightgrey;
     color: $black;
     border-radius: $border-radius;
+    width: 230px;
     padding: 1em;
+}
+
+.thing-image {
+    width: 100%;
 }
 
 .thing-name {
@@ -62,10 +68,18 @@ $border-radius: 4px;
     .things {
         grid-template-columns: auto auto;
     }
+
+    .thing {
+        width: 200px;
+    }
 }
 
 @media (max-width: 480px) {
     .things {
         grid-template-columns: auto;
+    }
+
+    .thing {
+        width: 300px;
     }
 }

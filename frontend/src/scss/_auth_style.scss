@@ -1,6 +1,5 @@
 $white: #ffffff;
 $lightgrey: #e6e6e6;
-$grey: #abafb0;
 $black: #252122;
 $sawarabi: "Sawarabi Mincho", serif;
 $opensans: "Open Sans", sans-serif;
@@ -96,7 +95,7 @@ $border-radius: 4px;
     border: 2px solid $black;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 640px) {
     .auth-form {
         width: 90%;
     }

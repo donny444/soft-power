@@ -8,7 +8,6 @@ import ThingPage from './components/thing_component';
 import TmdPage from './components/tmd_component';
 import NotSupportPage from './components/notsupport_component';
 import { AuthProvider } from "./components/auth"
-import ProtectedRoute from "./components/protectedroute";
 import RedirectIfAuthenticated from './components/redirectifauthenticated';
 
 function App() {

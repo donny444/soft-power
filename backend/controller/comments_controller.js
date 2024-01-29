@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const Comment = require("../model/comment_model.js");
 
 async function ShowComments(req, res) {
@@ -9,6 +8,7 @@ async function ShowComments(req, res) {
         return res.status(200).json(showComments);
     } catch(err) {
         console.error(err);
+        return res.status(500).json({ message: "Unexpected Error" });
     }
 }
 

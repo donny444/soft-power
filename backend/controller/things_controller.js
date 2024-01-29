@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const Thing = require("../model/thing_model.js");
 
 async function Things(req, res) {
@@ -17,6 +16,7 @@ async function SpecificThing(req, res) {
         return res.status(200).json(data);
     } catch(err) {
         console.error(err);
+        return res.status(500).json({ message: "Unexpected Error"});
     }
 }
 

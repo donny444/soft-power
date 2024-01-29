@@ -1,4 +1,5 @@
 $black: #252122;
+$white: #ffffff;
 
 @use "navbar_style";
 @use "footer_style";
@@ -16,4 +17,5 @@ $black: #252122;
 
 body {
     margin: 0;
+    background-color: $white;
 }

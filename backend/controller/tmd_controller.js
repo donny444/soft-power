@@ -15,12 +15,13 @@ async function Tmd(req, res) {
     try {
         const response = await fetch(url, options);
         if(response.status === 401) {
-            return res.status(401).json({ error: "Unauthorized request"});
+            return res.status(401).json({ message: "Unauthorized request"});
         }
         const data = await response.json();
         return res.status(200).json(data);
     } catch(err) {
         console.error(err);
+        return res.status(500).json({ message: "Unexpected Error"});
     }
 }
 

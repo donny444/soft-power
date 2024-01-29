@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import { useAuth } from "./auth";
+import { Link } from "react-router-dom";
 import NavBar from "./navbar_component";
 import { Main } from "./home_component";
 import Footer from "./footer_component";
@@ -63,7 +62,7 @@ function Thing({thing}) {
     const imagePath = `src/assets/images/${thing.fileName}`;
     return (
         <div className="thing">
-            <img src={imagePath} alt="" />
+            <img className="thing-image" src={imagePath} alt="" />
             <h3 className="thing-name">{thing.name}</h3>
             <h4 className="thing-category">{thing.category}</h4>
             <p className="thing-description">{thing.description}</p>
