@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "65cb27142f2e6cbe111717c1"
+  },
+  "user": {
+    "$oid": "65a0038747c5977782ce5b47"
+  },
+  "username": "johnwidth",
+  "thing": {
+    "$oid": "65c8b46bf30d9b7ac248e350"
+  },
+  "detail": "kuy",
+  "commentedAt": {
+    "$date": "2024-02-13T08:23:48.570Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65cb2d8c2f2e6cbe1117180b"
+  },
+  "user": {
+    "$oid": "65a0038747c5977782ce5b47"
+  },
+  "username": "johnwidth",
+  "thing": {
+    "$oid": "65c7986a8909753073e9509f"
+  },
+  "detail": "kuy2",
+  "commentedAt": {
+    "$date": "2024-02-13T08:51:24.939Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65cb65532176b7245d824002"
+  },
+  "user": {
+    "$oid": "65cb64eb2176b7245d823ff3"
+  },
+  "username": "carljohnson",
+  "thing": {
+    "$oid": "65c7986a8909753073e950a3"
+  },
+  "detail": "aroi",
+  "commentedAt": {
+    "$date": "2024-02-13T12:49:23.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65cb656c2176b7245d824012"
+  },
+  "user": {
+    "$oid": "65cb64eb2176b7245d823ff3"
+  },
+  "username": "carljohnson",
+  "thing": {
+    "$oid": "65c7986a8909753073e9509f"
+  },
+  "detail": "good",
+  "commentedAt": {
+    "$date": "2024-02-13T12:49:48.296Z"
+  },
+  "__v": 0
+}]

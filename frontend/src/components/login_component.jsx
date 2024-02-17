@@ -86,8 +86,8 @@ function LoginForm() {
                     <Link to="/register"><p className="auth-switch">Don't have an account? Register here.</p></Link>
                     <input className="auth-submit" type="submit" value="Login" />
                 </div>
+                {error && <p className="auth-error">{error}</p>}
             </form>
-            {error && <p>{error}</p>}
         </div>
     )
 }

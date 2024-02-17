@@ -7,6 +7,7 @@ export default function TmdPage() {
         <>
             <NavBar />
             <p className="not-support">The feature is not ready.</p>
+            <Tmd />
             <Footer />
         </>
     )
@@ -19,6 +20,9 @@ function Tmd() {
     useEffect(() => {
         const fetchData = async () => {
             const apiUrl = new URL("http://localhost:5174/tmd");
+            const province = "สมุทรปราการ"
+            const amphoe = "บางพลี"
+            const tambon = "บางแก้ว"
             const queries = {
                 province: "สมุทรปราหาร",
                 amphoe: "บางพลี",
@@ -35,7 +39,7 @@ function Tmd() {
             }
 
             try {
-                const response = await fetch(apiUrl, options);
+                const response = await fetch(`http://localhost:5174/tmd?province=${province}&amphoe=${amphoe}&tambon=${tambon}`, options);
                 if(!response.ok) {
                     const errMsg = await response.text();
                     throw new Error(errMsg || "Network response was not ok");
@@ -54,8 +58,7 @@ function Tmd() {
             {error && <p>Error: {error}</p>}
             {data &&
                 <div>
-                    <p>{data.WeatherForecasts[0].forecasts[0].data.rh}</p>
-                    <p>{data.WeatherForecasts[0].forecasts[0].data.tc}</p>
+                    <p>{data.WeatherForecasts}</p>
                 </div>
             }
         </div>

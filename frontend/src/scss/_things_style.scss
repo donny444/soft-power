@@ -12,7 +12,7 @@ $border-radius: 4px;
     gap: 20px;
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
+    width: 90%;
     margin: 1em auto;
 }
 
@@ -64,22 +64,22 @@ $border-radius: 4px;
     color: #4163ff;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
     .things {
         grid-template-columns: auto auto;
     }
 
     .thing {
-        width: 200px;
+        width: 300px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     .things {
         grid-template-columns: auto;
     }
 
     .thing {
-        width: 300px;
+        width: 400px;
     }
 }

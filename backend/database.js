@@ -14,10 +14,6 @@ async function main() {
             console.error(err);
         })
 
-        /*
-        await Thing.updateOne( { name: "Thing 4" }, { $set: { fileName: "sample.jpg" } } )
-        */
-
     } catch(err) {
         console.error(err);
     }

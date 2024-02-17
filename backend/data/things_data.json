@@ -1,0 +1,141 @@
+[{
+  "_id": {
+    "$oid": "65c7986a8909753073e9509f"
+  },
+  "name": "Pattaya",
+  "category": "Tourist Attraction",
+  "region": "Eastern",
+  "description": "Popular tourist attraction in Thailand.",
+  "fileName": "pattaya.jpg",
+  "comments": [],
+  "createdAt": {
+    "$date": "2024-02-10T15:38:18.183Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-10T15:38:18.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c7986a8909753073e950a0"
+  },
+  "name": "Somtum",
+  "category": "Food",
+  "region": "North Eastern",
+  "description": "A north eastern(esan) food. Also known as papaya salad.",
+  "fileName": "somtum.jpg",
+  "comments": [],
+  "createdAt": {
+    "$date": "2024-02-10T15:38:18.185Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-10T15:38:18.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c7986a8909753073e950a1"
+  },
+  "name": "Y-Series",
+  "category": "Entertainment",
+  "description": "Romantic LGBTQ+ TV Shows.",
+  "fileName": "y_series.jpg",
+  "comments": [],
+  "createdAt": {
+    "$date": "2024-02-10T15:38:18.185Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-10T15:38:18.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c7986a8909753073e950a4"
+  },
+  "name": "T-Pop",
+  "category": "Music",
+  "genres": "Pop",
+  "description": "A genre of music or artist in Thai pop cultural.",
+  "fileName": "t_pop.jpg",
+  "comments": [],
+  "createdAt": {
+    "$date": "2024-02-10T15:38:18.186Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-10T15:38:18.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c7986a8909753073e950a2"
+  },
+  "name": "Pad Krapow",
+  "category": "Food",
+  "region": "Central",
+  "spicy": true,
+  "description": "A food made by basil, chilli and meat.",
+  "fileName": "pad_krapow.jpg",
+  "comments": [],
+  "createdAt": {
+    "$date": "2024-02-10T15:38:18.186Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-10T15:38:18.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c7986a8909753073e950a3"
+  },
+  "name": "Mango with Sticky Rice",
+  "category": "Dessert",
+  "description": "A dessert that have mango served with sticky rice and coconut milk.",
+  "fileName": "mango_with_sticky_rice.jpg",
+  "comments": [],
+  "createdAt": {
+    "$date": "2024-02-10T15:38:18.186Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-10T15:38:18.190Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65c8b46bf30d9b7ac248e350"
+  },
+  "name": "Elephant pant",
+  "category": "Clothing",
+  "description": "Elephant pattern pants wore by many tourism in Thailand.",
+  "fileName": "elephant_pant.jpg",
+  "comments": [],
+  "createdAt": {
+    "$date": "2024-02-11T11:50:03.248Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-11T11:50:03.252Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ce1fe3bd4e20f0dc7609aa"
+  },
+  "name": "Songkran",
+  "category": "Festival",
+  "description": "A festival that people will splash water to each other.",
+  "fileName": "songkran.jpg",
+  "comments": [],
+  "createdAt": {
+    "$date": "2024-02-15T14:29:55.802Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-15T14:29:55.807Z"
+  },
+  "__v": 0
+}]

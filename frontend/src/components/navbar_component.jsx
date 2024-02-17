@@ -15,7 +15,7 @@ export default function NavBar() {
                 <Link to="/tmd">Weather</Link>
                 {isAuthenticated ? (
                     <>
-                        <p className="navbar-username">{localStorage.getItem("userName")}</p>
+                        <p className="navbar-username"><img src="src/assets/icons/profile.svg" className="link-icon"/>{sessionStorage.getItem("userName")}</p>
                         <p className="navbar-logout" onClick={handleLogout}>Logout</p>
                     </>
                 ) : (

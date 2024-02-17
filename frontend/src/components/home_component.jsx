@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import NavBar from "./navbar_component";
 import Footer from "./footer_component";
 
@@ -23,8 +24,31 @@ function Home() {
 }
 
 export function Main() {
+    const slideImages = [
+        "src/assets/images/thailand.jpg",
+        "src/assets/images/market.jpg",
+        "src/assets/images/tuktuk.jpg",
+        "src/assets/images/farm.jpg"
+    ];
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImageIndex((currentImageIndex + 1) % slideImages.length);
+        }, 5000);
+        return () => clearInterval(timer); // This will clear the interval on unmount
+    }, [currentImageIndex, slideImages.length]);
+
+    function doSlideshow() {
+        if(nextImageIndex >= slideImages.length) {
+          nextImageIndex = 0;
+        }
+        hero.style.backgroundImage = 'url("' + slideImages[nextImageIndex] + '")';
+        setTimeout(doSlideshow(), 5000);
+    }
+
     return (
-        <main>
+        <main id="hero" style={{backgroundImage: `url(${slideImages[currentImageIndex]})`}}>
             <h1>Know Thai Soft Power</h1>
             <h3>Get to know what it actually is, and the real meaning of "Soft Power"</h3>
             <div>
@@ -72,8 +96,8 @@ function Section() {
                     <img src="src/assets/images/t_pop.jpg" alt="t_pop" />
                 </div>
                 <div>
-                    <h4>Thai Foods</h4>
-                    <img src="src/assets/images/thai_food.jpg" alt="thai_food" />
+                    <h4>Pad Krapow</h4>
+                    <img src="src/assets/images/pad_krapow.jpg" alt="pad_krapow" />
                 </div>
             </div>
         </section>

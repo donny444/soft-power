@@ -17,7 +17,10 @@ const thingSchema = new Schema({
         type: String,
         required: true
     },
-    fileName: String,
+    fileName: {
+        type: String,
+        required: true
+    },
     createdAt: {
         type: Date,
         default: () => Date.now(),

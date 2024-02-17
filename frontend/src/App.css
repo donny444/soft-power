@@ -34,6 +34,10 @@ nav .navbar-logo {
   height: 50px;
 }
 
+.link-icon {
+  height: 16px;
+}
+
 @media (max-width: 480px) {
   nav {
     flex-direction: column;
@@ -48,6 +52,7 @@ nav .navbar-logo {
 }
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #abafb0;
@@ -64,6 +69,43 @@ footer p span {
   color: #252122;
 }
 
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.contact-me h3 {
+  font-family: "Sawarabi Mincho", serif;
+}
+.contact-me .contact-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.contact-me .contact-list a {
+  font-family: "Open Sans", sans-serif;
+  color: #252122;
+}
+.contact-me .contact-list a:hover {
+  color: #ffffff;
+}
+
+.link-icon {
+  height: 16px;
+}
+
+@media (max-width: 480px) {
+  .contact-me .contact-list {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    text-align: center;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -221,6 +263,7 @@ section img {
 
 .auth-header {
   font-family: "Sawarabi Mincho", serif;
+  color: #252122;
   text-align: center;
   margin: 0;
 }
@@ -234,6 +277,7 @@ section img {
 .auth-label {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
+  color: #252122;
 }
 
 .auth-input {
@@ -278,6 +322,7 @@ section img {
   font-weight: 600;
   font-size: 16px;
   height: 40px;
+  color: #252122;
   background-color: #ffffff;
   border-radius: 4px;
   padding: 0 20px;
@@ -286,6 +331,12 @@ section img {
 
 .auth-submit:hover {
   border: 2px solid #252122;
+}
+
+.auth-error {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #252122;
 }
 
 @media (max-width: 640px) {
@@ -299,7 +350,7 @@ section img {
   gap: 20px;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
+  width: 90%;
   margin: 1em auto;
 }
 
@@ -351,20 +402,20 @@ section img {
   color: #4163ff;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .things {
     grid-template-columns: auto auto;
   }
   .thing {
-    width: 200px;
+    width: 300px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .things {
     grid-template-columns: auto;
   }
   .thing {
-    width: 300px;
+    width: 400px;
   }
 }
 .specific-thing {
@@ -408,6 +459,12 @@ section img {
   height: 100%;
 }
 
+.auth-error {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #252122;
+}
+
 .comments {
   display: flex;
   flex-direction: column;
@@ -448,6 +505,7 @@ section img {
 
 body {
   margin: 0;
+  background-color: #ffffff;
 }
 
 /*# sourceMappingURL=App.css.map */

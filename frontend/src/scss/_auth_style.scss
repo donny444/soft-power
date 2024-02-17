@@ -26,6 +26,7 @@ $border-radius: 4px;
 
 .auth-header {
     font-family: $sawarabi;
+    color: $black;
     text-align: center;
     margin: 0;
 }
@@ -39,6 +40,7 @@ $border-radius: 4px;
 .auth-label {
     font-family: $opensans;
     font-size: 18px;
+    color: $black;
 }
 
 .auth-input {
@@ -85,6 +87,7 @@ $border-radius: 4px;
     font-weight: 600;
     font-size: 16px;
     height: 40px;
+    color: $black;
     background-color: $white;
     border-radius: 4px;
     padding: 0 20px;
@@ -93,6 +96,12 @@ $border-radius: 4px;
 
 .auth-submit:hover {
     border: 2px solid $black;
+}
+
+.auth-error {
+    font-family: $opensans;
+    font-size: 16px;
+    color: $black;
 }
 
 @media (max-width: 640px) {

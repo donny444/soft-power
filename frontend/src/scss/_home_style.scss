@@ -117,6 +117,7 @@ section {
         grid-template-columns: auto auto auto auto;
         gap: 20px;
         justify-content: space-evenly;
+
         div {
             display: flex;
             flex-direction: column;
@@ -145,6 +146,7 @@ section {
     }
 
     section {
+
         div {
             grid-template-columns: auto auto;
             justify-content: space-evenly;
@@ -158,6 +160,7 @@ section {
 
 @media (max-width: 480px) {
     section {
+        
         div {
             grid-template-columns: auto;
             justify-content: center;

@@ -21,6 +21,7 @@ nav {
         width: 400px;
         height: inherit;
         margin: 0;
+        
         a, p {
             display: flex;
             justify-content: center;
@@ -40,6 +41,10 @@ nav {
     .navbar-logo {
         height: 50px;
     }
+}
+
+.link-icon {
+    height: 16px;
 }
 
 @media (max-width: 480px) {

@@ -96,7 +96,7 @@ function CommentSection({ _id }) {
         const options = {
             method: "POST",
             headers: {
-                "x-access-token": localStorage.getItem("userToken"),
+                "x-access-token": sessionStorage.getItem("userToken"),
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
@@ -124,7 +124,7 @@ function CommentSection({ _id }) {
                     <input className="comment-submit" type="submit" value="Comment" />
                 </form>
             ) : (<></>)}
-            {error && <p>Error: {error}</p>}
+            {error && <p className="comment-error">Error: {error}</p>}
             {data && 
                 <div className="comments">
                     {[...data].reverse().map((comment, index) => (

@@ -47,6 +47,12 @@ $border-radius: 4px;
     height: 100%;
 }
 
+.auth-error {
+    font-family: $opensans;
+    font-size: 16px;
+    color: $black;
+}
+
 .comments {
     display: flex;
     flex-direction: column;
