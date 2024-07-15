@@ -1,6 +1,6 @@
 ## Description
 
-This is practicing full-stack project of website about soft power concept which has details on thai soft power and its definition. using knowledge of routing, authentication, API and database CRUD.
+This is my practicing fullstack website about soft power concept which has details on Thai soft power and its definition. Using knowledge of routing, authentication, API and NoSQL database.
 
 ## Tech Stack
 
@@ -17,7 +17,7 @@ This is practicing full-stack project of website about soft power concept which 
 - MongoDB(Mongoose)
 
 **Features**
-- Third Parties API About Thailand
+- Third Parties API About Thailand Soft Power
 - Account System
 - Commenting
 
