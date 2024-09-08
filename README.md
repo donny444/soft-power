@@ -1,6 +1,6 @@
 ## Description
 
-This is my practicing fullstack website about soft power concept which has details on Thai soft power and its definition. Using knowledge of routing, authentication, API and NoSQL database.
+This is my fullstack website about soft power concept which has details on Thai soft power and its definition. Using knowledge of routing, authentication, API, ORM and NoSQL database.
 
 ## Tech Stack
 
