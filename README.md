@@ -1,25 +1,25 @@
 ## Description
 
-This is my fullstack website about soft power concept which has details on Thai soft power and its definition. Using knowledge of routing, authentication, API, ORM and NoSQL database.
+This is my full-stack website about the concept of "soft power" which has details on its definition and examples of Thai soft powers. Using knowledge of webpage routing, user authentication, server-side API, NoSQL database, and ORM (ODM specifically).
 
 ## Tech Stack
 
-**Front-End**
+### Front-End
 - Vite
 - React
 - SCSS
 
-**Back-End**
+### Back-End
 - Node.js
 - Express
 
-**Database**
-- MongoDB(Mongoose)
+### Database
+- MongoDB (Mongoose)
 
-**Features**
-- Third Parties API About Thailand Soft Power
-- Account System
-- Commenting
+### Features
+[x] Third-party APIs about soft powers in Thailand.
+[x] Account system.
+[x] Commenting.
 
 **Routes**
 - Homepage
