@@ -17,9 +17,9 @@ This is my full-stack website about the concept of "soft power" which has detail
 - MongoDB (Mongoose)
 
 ### Features
-[x] Third-party APIs about soft powers in Thailand.
-[x] Account system.
-[x] Commenting.
+- [x] Third-party APIs about soft powers in Thailand.
+- [x] Account system.
+- [x] Commenting.
 
 **Routes**
 - Homepage
